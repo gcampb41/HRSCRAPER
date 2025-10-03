@@ -3,7 +3,7 @@
   "name": "hrscraper",
   "title": "HRSCRAPER Actor",
   "description": "Comprehensive scraper for HR-related datasets with enrichment and API output capabilities.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "buildTag": "latest",
   "environmentVariables": {},
   "input": {
