@@ -3,7 +3,7 @@
   "name": "hrscraper",
   "title": "HRSCRAPER Actor",
   "description": "Comprehensive scraper for HR-related datasets with enrichment and API output capabilities.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "buildTag": "latest",
   "environmentVariables": {},
   "input": {
@@ -31,10 +31,8 @@
         "selectors": {
           "title": "CSS Selectors (optional)",
           "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "CSS selectors to extract innerText from (e.g., ['h1', '.job-title'])."
+          "items": { "type": "string" },
+          "description": "CSS selectors to extract innerText from (e.g., [\"h1\", \".job-title\"])."
         },
         "requestTimeoutMs": {
           "title": "Request timeout (ms)",
