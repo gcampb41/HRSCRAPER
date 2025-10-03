@@ -5,5 +5,5 @@
   "description": "Comprehensive scraper for HR-related datasets with enrichment and API output capabilities.",
   "version": "0.0.1",
   "buildTag": "latest",
-  "environmentVariables": []
+  "environmentVariables": {}
 }
