@@ -62,3 +62,24 @@ apify run
 
 * `requestTimeoutMs` (default 15000)
 * `maxRetries` (default 2)
+
+## Quick test
+
+### Dry run (no network)
+```json
+{
+  "dryRun": true
+}
+```
+
+### Live test (fetch + parse)
+
+```json
+{
+  "dryRun": false,
+  "startUrls": ["https://apify.com", "https://news.ycombinator.com/"],
+  "selectors": ["h1", ".title a"]
+}
+```
+
+Expected: dataset rows with `title`, `metaDescription` (if present), and `selectedText` (first match per selector).
