@@ -1,8 +1,12 @@
 {
   "name": "hrscraper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "dependencies": {
-    "apify": "^3.0.0"
+    "apify": "^3.0.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "scripts": {
+    "start": "node src/main.js"
   }
 }
