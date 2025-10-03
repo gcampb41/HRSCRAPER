@@ -3,51 +3,49 @@
   "name": "hrscraper",
   "title": "HRSCRAPER Actor",
   "description": "Comprehensive scraper for HR-related datasets with enrichment and API output capabilities.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "buildTag": "latest",
   "environmentVariables": {},
   "input": {
     "title": "HRSCRAPER Input",
     "description": "Parameters for a minimal HTML scrape. Set dryRun=false to fetch pages.",
-    "schema": {
-      "type": "object",
-      "properties": {
-        "dryRun": {
-          "title": "Dry run",
-          "type": "boolean",
-          "description": "If true, skip network calls and just echo inputs.",
-          "default": true
-        },
-        "startUrls": {
-          "title": "Start URLs",
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uri"
-          },
-          "minItems": 1,
-          "description": "Pages to fetch and parse when dryRun=false."
-        },
-        "selectors": {
-          "title": "CSS Selectors (optional)",
-          "type": "array",
-          "items": { "type": "string" },
-          "description": "CSS selectors to extract innerText from (e.g., [\"h1\", \".job-title\"])."
-        },
-        "requestTimeoutMs": {
-          "title": "Request timeout (ms)",
-          "type": "integer",
-          "minimum": 1000,
-          "default": 15000
-        },
-        "maxRetries": {
-          "title": "Max retries",
-          "type": "integer",
-          "minimum": 0,
-          "default": 2
-        }
+    "type": "object",
+    "properties": {
+      "dryRun": {
+        "title": "Dry run",
+        "type": "boolean",
+        "description": "If true, skip network calls and just echo inputs.",
+        "default": true
       },
-      "required": []
-    }
+      "startUrls": {
+        "title": "Start URLs",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        },
+        "minItems": 1,
+        "description": "Pages to fetch and parse when dryRun=false."
+      },
+      "selectors": {
+        "title": "CSS Selectors (optional)",
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "CSS selectors to extract innerText from (e.g., [\"h1\", \".job-title\"])."
+      },
+      "requestTimeoutMs": {
+        "title": "Request timeout (ms)",
+        "type": "integer",
+        "minimum": 1000,
+        "default": 15000
+      },
+      "maxRetries": {
+        "title": "Max retries",
+        "type": "integer",
+        "minimum": 0,
+        "default": 2
+      }
+    },
+    "required": []
   }
 }
